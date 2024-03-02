@@ -1,0 +1,11 @@
+.cafeName,
+.cafeDesc {
+  font-size: 35px;
+  color: rgb(95, 68, 68);
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.cafeDesc {
+  font-size: 19px;
+}
