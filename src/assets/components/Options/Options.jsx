@@ -1,20 +1,22 @@
 import css from "./Options.module.css";
 
-const Options = () => {
+const Options = ({ updateFeedback, resetBtn, resetFeedback }) => {
   return (
     <div className={css.optionsWrap}>
-      <button type="button" className={css.optionsBtn}>
+      <button onClick={() => updateFeedback("good")} type="button" className={css.optionsBtn}>
         Good
       </button>
-      <button type="button" className={css.optionsBtn}>
+      <button onClick={() => updateFeedback("neutral")} type="button" className={css.optionsBtn}>
         Neutral
       </button>
-      <button type="button" className={css.optionsBtn}>
+      <button onClick={() => updateFeedback("bad")} type="button" className={css.optionsBtn}>
         Bad
       </button>
-      <button type="button" className={css.optionsBtn}>
-        Reset
-      </button>
+      {resetFeedback >= 1 && (
+        <button onClick={resetBtn} type="button" className={css.optionsBtn}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };
